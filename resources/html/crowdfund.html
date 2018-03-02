@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer Sample</title>
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/web3.js-develop/dist/web3.js"></script>
+	<script type="text/javascript">
+	var Web3 = require('web3');
+	var web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8541"));
+	var code = "0x60606040526101d3806100126000396000f3606060405260e060020a60003504635b2329d48114610034578063c1cbbca714610067578063f7572cf3146100e3575b610002565b346100025761017360043560008181526001602081905260408220908101546003820154101561018757600091506101cd565b346100025760048035600090815260016020818152604080842081518083018352338152348185018181526002840180548089019091558852978301909452919094208054915173ffffffffffffffffffffffffffffffffffffffff199092169190911781559351939091019290925560030180549091019055005b3461000257600080546001808201835560408051608081018252600435815260243560208281019182528284018781526060840188815287895291869052939096208054925173ffffffffffffffffffffffffffffffffffffffff199093169290921782555192810192909255516002820155915160039092019190915560408051918252519081900360200190f35b604080519115158252519081900360200190f35b8054600382015460405173ffffffffffffffffffffffffffffffffffffffff929092169181156108fc0291906000818181858888f1505060006003850155506001935050505b5091905056";
+	var abi = [{"constant":false,"inputs":[{"name":"campaignID","type":"uint256"}],"name":"checkGoalReached","outputs":[{"name":"reached","type":"bool"}],"payable":false,"type":"function","stateMutability":"nonpayable"},{"constant":false,"inputs":[{"name":"campaignID","type":"uint256"}],"name":"contribute","outputs":[],"payable":false,"type":"function","stateMutability":"nonpayable"},{"constant":false,"inputs":[{"name":"beneficiary","type":"address"},{"name":"goal","type":"uint256"}],"name":"newCampaign","outputs":[{"name":"campaignID","type":"uint256"}],"payable":false,"type":"function","stateMutability":"nonpayable"}];
+	var Contract = web3.eth.contract(abi);
+	var crowd = null;
+	
+	$(document).ready(function() {
+		var unlockResult = false;
+		var coinbase = web3.eth.accounts[0];
+		unlockResult = web3.personal.unlockAccount(coinbase,'Alice');
+		
+		if(!unlockResult){
+			alert("Unlocking the account failed.");
+		}
+		
+		$('#btnCreate').click(function(){
+			crowd = Contract.new({
+				data: code,
+				gas: 2000000,
+				from: coinbase
+			}, function (error, contract) {
+				if (!error) {
+					if (!contract.address) {
+						console.log("Creating Contract", contract.transactionHash);
+						$('#txHaxh').val(contract.transactionHash);
+					} else {
+						var address = contract.address;
+						$('#_contractAddress').val(address);
+						console.log("Contract Deployed", address);
+					}
+				} else
+					console.error(error);
+			});
+		});
+		
+		$('#btnCheckComplete').click(function(){
+			var txHash = $('#txHaxh').val();
+			var txReceipt = web3.eth.getTransactionReceipt(txHash);
+			$('#_contractAddress').val(txReceipt);
+		});
+		
+		$('#btnAt').click(function(){
+			var address = $('#_contractAddress').val();
+			crowd = Contract.at(address);
+		});
+		
+		$('#btnNewCampaign').click(function(){
+		});
+		$('#btnContribute').click(function(){
+		});
+		$('#btnCheck').click(function(){
+		});
+		$('#btnCheck_Tx').click(function(){
+		});
+	});
+	</script>	
+</head>
+<body>
+	<h2>Contract</h2>
+	<div>
+		<h3>Create</h3>
+		<button id="btnCreate">Create</button>
+		<h3>TX Hash</h3>
+		<input type="text" name="txHaxh" id="txHaxh" value="" readonly/>
+		<button id="btnCheckComplete">CheckComplete</button>
+		<h3>At</h3>
+		<input type="text" id="_contractAddress" size="20"/><button id="btnAt">At</button>
+
+		<h3>New Campaign</h3>
+		Beneficiery : <input type="text" id="_beneficiery" size="40"/><br/>
+		Goal (ether): <input type="text" id="_goal" size="20"/><br/>
+		<button id="btnNewCampaign">New Campaign</button>
+
+		<h3>Contribute</h3>
+		Campaign ID : <input type="text" id="_contributeCampaignId" size="5"/><br/>
+		Amount (ether) : <input type="text" id="_contributeEther" size="20"/><br/>
+		<button id="btnContribute">Contribute</button>
+
+		<h3>Goal Reached Check</h3>
+		Campaign ID : <input type="text" id="_checkCampaignId" size="5"/><br/>
+		Is Reached : <input type="text" id="_checkResult" size="5" readonly/><br/>
+		<button id="btnCheck">Check(call)</button><button id="btnCheck_Tx">Check(send)</button>
+	</div>
+</body>
+</html>

@@ -1,0 +1,1 @@
+geth --identity "node3" --networkid 15 --datadir D:\Ethereum\node3 --rpc --rpcaddr "0.0.0.0" --rpcport "8543" --rpccorsdomain "*" --rpcapi "web3,eth,miner,admin,personal,db,net,shh,txpool,debug" --ipcdisable --port 3033 --nodiscover console 2>> D:\Ethereum\node3\geth.log

@@ -1,0 +1,19 @@
+admin.peers
+eth.blockNumber
+eth.mining
+eth.blockNumber
+admin.peers
+eth.accounts
+personal.listWallets
+eth.mining
+admin.nodeInfo
+admin.peers
+admin.nodeInfo
+eth.blockNumber
+eth.pendingTransactions
+eth.getBalance("0x0dC90F1502778EcdaA860bEE9bD86Ac75EA80442")
+eth.peers
+admin.peers
+eth.sendTransaction({from:0x6527840ae6cf6a885b7494b8d2f358f5d8be5f16,to:0x485a24ceae85ccc5ee9c8c9576f12356b6abe531,value: web3.toWei(10, "ether")})
+eth.sendTransaction({from:"0x6527840ae6cf6a885b7494b8d2f358f5d8be5f16",to:"0x485a24ceae85ccc5ee9c8c9576f12356b6abe531",value:web3.toWei(10, "ether")})
+eth.sendTransaction({from: eth.coinbase,to: "0x485a24ceae85ccc5ee9c8c9576f12356b6abe531",value: web3.toWei(10, "ether")})

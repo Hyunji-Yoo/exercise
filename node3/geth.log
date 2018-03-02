@@ -1,0 +1,43 @@
+INFO [02-26|13:13:14] Starting peer-to-peer node               instance=Geth/node3/v1.7.3-stable-4bb3c89d/windows-amd64/go1.9
+INFO [02-26|13:13:14] Allocated cache and file handles         database=D:\\Ethereum\\node3\\geth\\chaindata cache=128 handles=1024
+INFO [02-26|13:13:14] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Engine: unknown}"
+INFO [02-26|13:13:14] Disk storage enabled for ethash caches   dir=D:\\Ethereum\\node3\\geth\\ethash count=3
+INFO [02-26|13:13:14] Disk storage enabled for ethash DAGs     dir=C:\\Users\\LGCNS\\AppData\\Ethash count=2
+INFO [02-26|13:13:14] Initialising Ethereum protocol           versions="[63 62]" network=15
+INFO [02-26|13:13:14] Loaded most recent local header          number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|13:13:14] Loaded most recent local full block      number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|13:13:14] Loaded most recent local fast block      number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|13:13:14] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-26|13:13:14] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [02-26|13:13:14] Blockchain not empty, fast sync disabled 
+INFO [02-26|13:13:14] Starting P2P networking 
+INFO [02-26|13:13:14] RLPx listener up                         self="enode://22af092805464b9539a4c1747a7f86903374a64970d285dac578986f730f96bf735c66cba9ddc24b39ce6970033b5893c83a7394f6c224fff867bc981734d2c8@[::]:3033?discport=0"
+INFO [02-26|13:13:14] HTTP endpoint opened: http://0.0.0.0:8543 
+INFO [02-26|13:13:48] HTTP endpoint closed: http://0.0.0.0:8543 
+INFO [02-26|13:13:48] Blockchain manager stopped 
+INFO [02-26|13:13:48] Stopping Ethereum protocol 
+INFO [02-26|13:13:48] Ethereum protocol stopped 
+INFO [02-26|13:13:48] Transaction pool stopped 
+INFO [02-26|13:13:48] Database closed                          database=D:\\Ethereum\\node3\\geth\\chaindata
+INFO [02-26|13:14:53] Starting peer-to-peer node               instance=Geth/node3/v1.7.3-stable-4bb3c89d/windows-amd64/go1.9
+INFO [02-26|13:14:54] Allocated cache and file handles         database=D:\\Ethereum\\node3\\geth\\chaindata cache=128 handles=1024
+INFO [02-26|13:14:54] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Engine: unknown}"
+INFO [02-26|13:14:54] Disk storage enabled for ethash caches   dir=D:\\Ethereum\\node3\\geth\\ethash count=3
+INFO [02-26|13:14:54] Disk storage enabled for ethash DAGs     dir=C:\\Users\\LGCNS\\AppData\\Ethash count=2
+INFO [02-26|13:14:54] Initialising Ethereum protocol           versions="[63 62]" network=15
+INFO [02-26|13:14:54] Loaded most recent local header          number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|13:14:54] Loaded most recent local full block      number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|13:14:54] Loaded most recent local fast block      number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|13:14:54] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-26|13:14:54] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [02-26|13:14:54] Blockchain not empty, fast sync disabled 
+INFO [02-26|13:14:54] Starting P2P networking 
+INFO [02-26|13:14:54] RLPx listener up                         self="enode://22af092805464b9539a4c1747a7f86903374a64970d285dac578986f730f96bf735c66cba9ddc24b39ce6970033b5893c83a7394f6c224fff867bc981734d2c8@[::]:3033?discport=0"
+INFO [02-26|13:14:54] HTTP endpoint opened: http://0.0.0.0:8543 
+INFO [02-26|14:14:54] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-26|15:14:54] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-26|16:14:54] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-26|16:57:03] Imported new chain segment               blocks=1 txs=1 mgas=0.021 elapsed=480.027ms mgasps=0.044 number=57 hash=f9e555…3cc487
+INFO [02-26|16:58:41] Imported new chain segment               blocks=1 txs=0 mgas=0.000 elapsed=104.005ms mgasps=0.000 number=58 hash=6573e3…a3b890
+INFO [02-26|17:14:54] Regenerated local transaction journal    transactions=0 accounts=0
+^C

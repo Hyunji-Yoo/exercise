@@ -1,0 +1,61 @@
+admin.peers
+eth.mining
+eth.coinbase
+personal.listWallets[0].status
+miner.start()
+eth.mining
+miner.stop()
+eth.mining
+eth.accounts
+personal.listWallets
+eth.mining
+admin.peers
+eth.mining
+admin.peers
+eth.mining
+admin.nodeInfo
+miner.start(0
+)
+eth.mining
+eth.blockNumber
+miner.start()
+eth.pendingTransactions
+admin.peers
+eth.getBalance("0x0dC90F1502778EcdaA860bEE9bD86Ac75EA80442")
+eth.ming
+eth.mining
+eth.accounts
+eth.mining
+eth.pendingTransactions
+eth.sendTransaction({from: eth.coinbase,to: "0x485a24ceae85ccc5ee9c8c9576f12356b6abe531",value: web3.toWei(10, "ether")})
+eth.pendingTransactions
+miner.start()
+miner.stop()
+eth.pendingTransactions
+miner.start()
+eth.mining
+eth.blockNumber
+0xf3d9aa5b9acc4dfb10e1f0870e8bd29270802aa6
+0x0dC90F1502778EcdaA860bEE9bD86Ac75EA80442
+0xF3D9aA5b9AcC4dFB10e1f0870E8BD29270802aa6
+6527840ae6cf6a885b7494b8d2f358f5d8be5f16
+geth --datadir D:\Ethereum\study1\data
+#### node2  ###
+geth --identity "node2" --datadir D:\Ethereum\node2 --rpc --rpcaddr "0.0.0.0" --rpcport "8542" --rpcapi "admin,db,eth,debug,miner,net,shh,txpool,personal,web3" --ipcdisable --port 3032 --nodiscover console
+admin,db,eth,debug,miner,net,shh,txpool,personal,web3
+geth --identity "studyNetwork"
+1. Geth
+geth --datadir D:\ether\data_testnet init D:\ether\data_testnet\CustomGenesis.json
+=> : tree D:\ether\data_testnet
+2. Geth
+geth --networkid 4649 --nodiscover --maxpeers 0 --datadir D:\ether\data_testnet console 2>> D:\ether\data_testnet\geth.log
+geth --dev console
+3.
+=> : eth.accounts
+4.
+eth.mining
+eth.accounts[0]
+admin.nodeInfo
+eth.getTransactionReceipt("0xa81be34d7dc1ff6efaf80f4f1f9b8f8e158be30d5d9091deb27a85760d342a8b")
+eth.pendigTransactions
+eth.pendingTransactions

@@ -1,0 +1,303 @@
+INFO [02-22|16:48:42] Starting peer-to-peer node               instance=Geth/node1/v1.7.3-stable-4bb3c89d/windows-amd64/go1.9
+INFO [02-22|16:48:42] Allocated cache and file handles         database=D:\\Ethereum\\node1\\geth\\chaindata cache=128 handles=1024
+INFO [02-22|16:48:42] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Engine: unknown}"
+INFO [02-22|16:48:42] Disk storage enabled for ethash caches   dir=D:\\Ethereum\\node1\\geth\\ethash count=3
+INFO [02-22|16:48:42] Disk storage enabled for ethash DAGs     dir=C:\\Users\\LGCNS\\AppData\\Ethash count=2
+INFO [02-22|16:48:42] Initialising Ethereum protocol           versions="[63 62]" network=15
+INFO [02-22|16:48:42] Loaded most recent local header          number=34 hash=165216…1fa680 td=4149053259
+INFO [02-22|16:48:42] Loaded most recent local full block      number=34 hash=165216…1fa680 td=4149053259
+INFO [02-22|16:48:42] Loaded most recent local fast block      number=34 hash=165216…1fa680 td=4149053259
+INFO [02-22|16:48:42] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-22|16:48:42] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [02-22|16:48:42] Blockchain not empty, fast sync disabled 
+INFO [02-22|16:48:42] Starting P2P networking 
+INFO [02-22|16:48:42] RLPx listener up                         self="enode://8c1668b0ca133b87dd71a0bcc0172464ecd53f4eadf6a66d6107a3de080dff3480e9779ad8fe397503557f6f1e7bfc080f4e3c2f0da07e76b93ac880eece6002@[::]:3031?discport=0"
+INFO [02-22|16:48:42] IPC endpoint opened: \\.\pipe\geth.ipc 
+INFO [02-22|16:48:42] HTTP endpoint opened: http://0.0.0.0:8541 
+INFO [02-22|17:48:42] Regenerated local transaction journal    transactions=0 accounts=0
+^CINFO [02-23|10:50:19] Starting peer-to-peer node               instance=Geth/node1/v1.7.3-stable-4bb3c89d/windows-amd64/go1.9
+INFO [02-23|10:50:19] Allocated cache and file handles         database=D:\\Ethereum\\node1\\geth\\chaindata cache=128 handles=1024
+INFO [02-23|10:50:19] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Engine: unknown}"
+INFO [02-23|10:50:19] Disk storage enabled for ethash caches   dir=D:\\Ethereum\\node1\\geth\\ethash count=3
+INFO [02-23|10:50:19] Disk storage enabled for ethash DAGs     dir=C:\\Users\\LGCNS\\AppData\\Ethash count=2
+INFO [02-23|10:50:19] Initialising Ethereum protocol           versions="[63 62]" network=15
+INFO [02-23|10:50:19] Loaded most recent local header          number=34 hash=165216…1fa680 td=4149053259
+INFO [02-23|10:50:19] Loaded most recent local full block      number=34 hash=165216…1fa680 td=4149053259
+INFO [02-23|10:50:19] Loaded most recent local fast block      number=34 hash=165216…1fa680 td=4149053259
+INFO [02-23|10:50:19] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-23|10:50:19] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [02-23|10:50:19] Blockchain not empty, fast sync disabled 
+INFO [02-23|10:50:19] Starting P2P networking 
+INFO [02-23|10:50:19] RLPx listener up                         self="enode://8c1668b0ca133b87dd71a0bcc0172464ecd53f4eadf6a66d6107a3de080dff3480e9779ad8fe397503557f6f1e7bfc080f4e3c2f0da07e76b93ac880eece6002@[::]:3031?discport=0"
+INFO [02-23|10:50:19] IPC endpoint opened: \\.\pipe\geth.ipc 
+INFO [02-23|10:50:19] HTTP endpoint opened: http://0.0.0.0:8541 
+INFO [02-23|10:56:56] Submitted transaction                    fullhash=0x9adcab7cfbae5f8047a87bf08400296463fe4df52b86a0f38df8a9fe25bd4b00 recipient=0x56C49aAcefAC168839a1495888ea183046543a8c
+INFO [02-23|10:58:19] Updated mining threads                   threads=0
+INFO [02-23|10:58:19] Transaction pool price threshold updated price=18000000000
+INFO [02-23|10:58:19] Starting mining operation 
+INFO [02-23|10:58:19] Commit new mining work                   number=35 txs=1 uncles=0 elapsed=2.000ms
+INFO [02-23|11:16:51] Successfully sealed new block            number=35 hash=09d87d…e48783
+INFO [02-23|11:16:51] 🔨 mined potential block                  number=35 hash=09d87d…e48783
+INFO [02-23|11:16:51] Commit new mining work                   number=36 txs=0 uncles=0 elapsed=2.000ms
+INFO [02-23|11:25:27] Successfully sealed new block            number=36 hash=c14e3f…d8153e
+INFO [02-23|11:25:27] 🔨 mined potential block                  number=36 hash=c14e3f…d8153e
+INFO [02-23|11:25:27] Commit new mining work                   number=37 txs=0 uncles=0 elapsed=0s
+INFO [02-23|11:27:32] Successfully sealed new block            number=37 hash=b25cae…41d245
+INFO [02-23|11:27:32] 🔨 mined potential block                  number=37 hash=b25cae…41d245
+INFO [02-23|11:27:32] Commit new mining work                   number=38 txs=0 uncles=0 elapsed=0s
+INFO [02-23|11:30:20] Successfully sealed new block            number=38 hash=9b5b83…6c597c
+INFO [02-23|11:30:20] 🔨 mined potential block                  number=38 hash=9b5b83…6c597c
+INFO [02-23|11:30:20] Commit new mining work                   number=39 txs=0 uncles=0 elapsed=1ms
+INFO [02-23|11:31:09] Successfully sealed new block            number=39 hash=e50db6…d00f08
+INFO [02-23|11:31:09] 🔨 mined potential block                  number=39 hash=e50db6…d00f08
+INFO [02-23|11:31:09] Commit new mining work                   number=40 txs=0 uncles=0 elapsed=0s
+INFO [02-23|11:31:43] Successfully sealed new block            number=40 hash=686462…cb29c7
+INFO [02-23|11:31:43] 🔗 block reached canonical chain          number=35 hash=09d87d…e48783
+INFO [02-23|11:31:43] 🔨 mined potential block                  number=40 hash=686462…cb29c7
+INFO [02-23|11:31:43] Commit new mining work                   number=41 txs=0 uncles=0 elapsed=0s
+INFO [02-23|11:38:19] Successfully sealed new block            number=41 hash=d25233…f671e3
+INFO [02-23|11:38:19] 🔗 block reached canonical chain          number=36 hash=c14e3f…d8153e
+INFO [02-23|11:38:19] 🔨 mined potential block                  number=41 hash=d25233…f671e3
+INFO [02-23|11:38:19] Commit new mining work                   number=42 txs=0 uncles=0 elapsed=0s
+INFO [02-23|11:42:35] Successfully sealed new block            number=42 hash=d27be0…ef1ef2
+INFO [02-23|11:42:35] 🔗 block reached canonical chain          number=37 hash=b25cae…41d245
+INFO [02-23|11:42:35] 🔨 mined potential block                  number=42 hash=d27be0…ef1ef2
+INFO [02-23|11:42:35] Commit new mining work                   number=43 txs=0 uncles=0 elapsed=7.000ms
+INFO [02-23|11:45:06] Successfully sealed new block            number=43 hash=c23e11…f1d980
+INFO [02-23|11:45:06] 🔗 block reached canonical chain          number=38 hash=9b5b83…6c597c
+INFO [02-23|11:45:06] 🔨 mined potential block                  number=43 hash=c23e11…f1d980
+INFO [02-23|11:45:06] Commit new mining work                   number=44 txs=0 uncles=0 elapsed=0s
+INFO [02-23|11:46:00] Successfully sealed new block            number=44 hash=593a77…125c0a
+INFO [02-23|11:46:00] 🔗 block reached canonical chain          number=39 hash=e50db6…d00f08
+INFO [02-23|11:46:00] 🔨 mined potential block                  number=44 hash=593a77…125c0a
+INFO [02-23|11:46:00] Commit new mining work                   number=45 txs=0 uncles=0 elapsed=1.000ms
+INFO [02-23|11:50:19] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-23|11:58:15] Successfully sealed new block            number=45 hash=727c27…3f04f7
+INFO [02-23|11:58:15] 🔗 block reached canonical chain          number=40 hash=686462…cb29c7
+INFO [02-23|11:58:15] 🔨 mined potential block                  number=45 hash=727c27…3f04f7
+INFO [02-23|11:58:15] Commit new mining work                   number=46 txs=0 uncles=0 elapsed=1.000ms
+INFO [02-23|12:06:07] Successfully sealed new block            number=46 hash=a2e920…a35d4a
+INFO [02-23|12:06:07] 🔗 block reached canonical chain          number=41 hash=d25233…f671e3
+INFO [02-23|12:06:07] 🔨 mined potential block                  number=46 hash=a2e920…a35d4a
+INFO [02-23|12:06:07] Commit new mining work                   number=47 txs=0 uncles=0 elapsed=0s
+INFO [02-23|12:07:46] Successfully sealed new block            number=47 hash=bc1283…2f924e
+INFO [02-23|12:07:46] 🔗 block reached canonical chain          number=42 hash=d27be0…ef1ef2
+INFO [02-23|12:07:46] 🔨 mined potential block                  number=47 hash=bc1283…2f924e
+INFO [02-23|12:07:46] Commit new mining work                   number=48 txs=0 uncles=0 elapsed=0s
+INFO [02-23|12:13:33] Successfully sealed new block            number=48 hash=afcbcb…38c88a
+INFO [02-23|12:13:33] 🔗 block reached canonical chain          number=43 hash=c23e11…f1d980
+INFO [02-23|12:13:33] 🔨 mined potential block                  number=48 hash=afcbcb…38c88a
+INFO [02-23|12:13:33] Commit new mining work                   number=49 txs=0 uncles=0 elapsed=5.000ms
+INFO [02-23|12:22:02] Successfully sealed new block            number=49 hash=aa6945…8ce900
+INFO [02-23|12:22:02] 🔗 block reached canonical chain          number=44 hash=593a77…125c0a
+INFO [02-23|12:22:02] 🔨 mined potential block                  number=49 hash=aa6945…8ce900
+INFO [02-23|12:22:02] Commit new mining work                   number=50 txs=0 uncles=0 elapsed=0s
+INFO [02-23|12:24:59] Successfully sealed new block            number=50 hash=44a196…ae69d9
+INFO [02-23|12:24:59] 🔗 block reached canonical chain          number=45 hash=727c27…3f04f7
+INFO [02-23|12:24:59] 🔨 mined potential block                  number=50 hash=44a196…ae69d9
+INFO [02-23|12:24:59] Commit new mining work                   number=51 txs=0 uncles=0 elapsed=0s
+INFO [02-23|12:29:40] Successfully sealed new block            number=51 hash=5e1177…15ec3d
+INFO [02-23|12:29:40] 🔗 block reached canonical chain          number=46 hash=a2e920…a35d4a
+INFO [02-23|12:29:40] 🔨 mined potential block                  number=51 hash=5e1177…15ec3d
+INFO [02-23|12:29:40] Commit new mining work                   number=52 txs=0 uncles=0 elapsed=1.000ms
+INFO [02-23|12:33:02] Successfully sealed new block            number=52 hash=0ec1ec…61d30c
+INFO [02-23|12:33:02] 🔗 block reached canonical chain          number=47 hash=bc1283…2f924e
+INFO [02-23|12:33:02] 🔨 mined potential block                  number=52 hash=0ec1ec…61d30c
+INFO [02-23|12:33:02] Commit new mining work                   number=53 txs=0 uncles=0 elapsed=0s
+INFO [02-23|12:39:45] Successfully sealed new block            number=53 hash=6837c0…460157
+INFO [02-23|12:39:45] 🔗 block reached canonical chain          number=48 hash=afcbcb…38c88a
+INFO [02-23|12:39:45] 🔨 mined potential block                  number=53 hash=6837c0…460157
+INFO [02-23|12:39:45] Commit new mining work                   number=54 txs=0 uncles=0 elapsed=0s
+INFO [02-23|12:43:39] Successfully sealed new block            number=54 hash=d1c9ec…84a78c
+INFO [02-23|12:43:39] 🔗 block reached canonical chain          number=49 hash=aa6945…8ce900
+INFO [02-23|12:43:39] 🔨 mined potential block                  number=54 hash=d1c9ec…84a78c
+INFO [02-23|12:43:39] Commit new mining work                   number=55 txs=0 uncles=0 elapsed=0s
+INFO [02-23|12:44:05] Successfully sealed new block            number=55 hash=fb36d8…bcbd3c
+INFO [02-23|12:44:05] 🔗 block reached canonical chain          number=50 hash=44a196…ae69d9
+INFO [02-23|12:44:05] 🔨 mined potential block                  number=55 hash=fb36d8…bcbd3c
+INFO [02-23|12:44:05] Commit new mining work                   number=56 txs=0 uncles=0 elapsed=0s
+INFO [02-23|12:50:19] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-23|13:50:19] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-23|14:27:54] Submitted transaction                    fullhash=0xb1c8182277c387c8b11b5d0e20e73ea27ba9774b2d3b871b3689a546a6d1531e recipient=0x56C49aAcefAC168839a1495888ea183046543a8c
+INFO [02-23|14:50:19] Regenerated local transaction journal    transactions=1 accounts=1
+INFO [02-23|15:08:45] Submitted transaction                    fullhash=0x1dbb6832477982e155aad1374a4a6a7bcb03c4a4e53550e9e6792656fb3ee580 recipient=0x56C49aAcefAC168839a1495888ea183046543a8c
+INFO [02-23|15:09:15] Updated mining threads                   threads=0
+INFO [02-23|15:09:15] Transaction pool price threshold updated price=18000000000
+INFO [02-23|15:09:15] Starting mining operation 
+INFO [02-23|15:09:15] Commit new mining work                   number=56 txs=2 uncles=0 elapsed=8.000ms
+INFO [02-23|15:32:32] Successfully sealed new block            number=56 hash=ee17fb…1af7fb
+INFO [02-23|15:32:32] 🔗 block reached canonical chain          number=51 hash=5e1177…15ec3d
+INFO [02-23|15:32:32] 🔨 mined potential block                  number=56 hash=ee17fb…1af7fb
+INFO [02-23|15:32:32] Commit new mining work                   number=57 txs=0 uncles=0 elapsed=3.000ms
+INFO [02-23|15:50:19] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-23|16:50:19] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-23|17:50:19] Regenerated local transaction journal    transactions=0 accounts=0
+^CINFO [02-26|16:30:43] Starting peer-to-peer node               instance=Geth/node1/v1.7.3-stable-4bb3c89d/windows-amd64/go1.9
+INFO [02-26|16:30:43] Allocated cache and file handles         database=D:\\Ethereum\\node1\\geth\\chaindata cache=128 handles=1024
+INFO [02-26|16:30:43] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Engine: unknown}"
+INFO [02-26|16:30:43] Disk storage enabled for ethash caches   dir=D:\\Ethereum\\node1\\geth\\ethash count=3
+INFO [02-26|16:30:43] Disk storage enabled for ethash DAGs     dir=C:\\Users\\LGCNS\\AppData\\Ethash count=2
+INFO [02-26|16:30:43] Initialising Ethereum protocol           versions="[63 62]" network=15
+INFO [02-26|16:30:43] Loaded most recent local header          number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|16:30:43] Loaded most recent local full block      number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|16:30:43] Loaded most recent local fast block      number=56 hash=ee17fb…1af7fb td=5279808668
+INFO [02-26|16:30:43] Loaded local transaction journal         transactions=0 dropped=0
+INFO [02-26|16:30:43] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [02-26|16:30:43] Blockchain not empty, fast sync disabled 
+INFO [02-26|16:30:43] Starting P2P networking 
+INFO [02-26|16:30:43] RLPx listener up                         self="enode://8c1668b0ca133b87dd71a0bcc0172464ecd53f4eadf6a66d6107a3de080dff3480e9779ad8fe397503557f6f1e7bfc080f4e3c2f0da07e76b93ac880eece6002@[::]:3031?discport=0"
+INFO [02-26|16:30:43] IPC endpoint opened: \\.\pipe\geth.ipc 
+INFO [02-26|16:30:43] HTTP endpoint opened: http://0.0.0.0:8541 
+INFO [02-26|16:34:44] Submitted transaction                    fullhash=0xad0e931d7a5910ca29d735d83d23ff62b57fb33089baacdd72d6d3bf7e539393 recipient=0x56C49aAcefAC168839a1495888ea183046543a8c
+INFO [02-26|16:35:27] Updated mining threads                   threads=0
+INFO [02-26|16:35:27] Transaction pool price threshold updated price=18000000000
+INFO [02-26|16:35:27] Starting mining operation 
+INFO [02-26|16:35:27] Commit new mining work                   number=57 txs=1 uncles=0 elapsed=6.000ms
+INFO [02-26|16:56:59] Successfully sealed new block            number=57 hash=f9e555…3cc487
+INFO [02-26|16:56:59] 🔨 mined potential block                  number=57 hash=f9e555…3cc487
+INFO [02-26|16:56:59] Commit new mining work                   number=58 txs=0 uncles=0 elapsed=6.000ms
+INFO [02-26|16:58:40] Successfully sealed new block            number=58 hash=6573e3…a3b890
+INFO [02-26|16:58:40] 🔨 mined potential block                  number=58 hash=6573e3…a3b890
+INFO [02-26|16:58:40] Commit new mining work                   number=59 txs=0 uncles=0 elapsed=1ms
+^CINFO [02-27|16:09:10] Starting peer-to-peer node               instance=Geth/node1/v1.7.3-stable-4bb3c89d/windows-amd64/go1.9
+INFO [02-27|16:09:10] Allocated cache and file handles         database=D:\\Ethereum\\node1\\geth\\chaindata cache=128 handles=1024
+INFO [02-27|16:09:10] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Engine: unknown}"
+INFO [02-27|16:09:10] Disk storage enabled for ethash caches   dir=D:\\Ethereum\\node1\\geth\\ethash count=3
+INFO [02-27|16:09:10] Disk storage enabled for ethash DAGs     dir=C:\\Users\\LGCNS\\AppData\\Ethash count=2
+INFO [02-27|16:09:10] Initialising Ethereum protocol           versions="[63 62]" network=15
+INFO [02-27|16:09:10] Loaded most recent local header          number=58 hash=6573e3…a3b890 td=5359405698
+INFO [02-27|16:09:10] Loaded most recent local full block      number=58 hash=6573e3…a3b890 td=5359405698
+INFO [02-27|16:09:10] Loaded most recent local fast block      number=58 hash=6573e3…a3b890 td=5359405698
+INFO [02-27|16:09:10] Loaded local transaction journal         transactions=1 dropped=1
+INFO [02-27|16:09:10] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [02-27|16:09:10] Blockchain not empty, fast sync disabled 
+INFO [02-27|16:09:10] Starting P2P networking 
+INFO [02-27|16:09:10] RLPx listener up                         self="enode://8c1668b0ca133b87dd71a0bcc0172464ecd53f4eadf6a66d6107a3de080dff3480e9779ad8fe397503557f6f1e7bfc080f4e3c2f0da07e76b93ac880eece6002@[::]:3031?discport=0"
+INFO [02-27|16:09:10] IPC endpoint opened: \\.\pipe\geth.ipc 
+INFO [02-27|16:09:10] HTTP endpoint opened: http://0.0.0.0:8541 
+INFO [02-27|16:10:57] Submitted transaction                    fullhash=0x117405b16726d8c622eb0ee7e3e6c62ed78b639a2e47391eea77c8a49b035a16 recipient=0x62d62e4A0Cd84955B91A0774a0Ef788C34c007C1
+INFO [02-27|16:11:23] Updated mining threads                   threads=0
+INFO [02-27|16:11:23] Transaction pool price threshold updated price=18000000000
+INFO [02-27|16:11:23] Starting mining operation 
+INFO [02-27|16:11:23] Commit new mining work                   number=59 txs=1 uncles=0 elapsed=4.000ms
+INFO [02-27|16:14:43] Successfully sealed new block            number=59 hash=8c59e3…563252
+INFO [02-27|16:14:43] 🔨 mined potential block                  number=59 hash=8c59e3…563252
+INFO [02-27|16:14:43] Commit new mining work                   number=60 txs=0 uncles=0 elapsed=2.000ms
+INFO [02-27|16:22:01] Successfully sealed new block            number=60 hash=bc3ae9…361e6c
+INFO [02-27|16:22:01] 🔨 mined potential block                  number=60 hash=bc3ae9…361e6c
+INFO [02-27|16:22:01] Commit new mining work                   number=61 txs=0 uncles=0 elapsed=0s
+INFO [02-27|16:37:14] Submitted contract creation              fullhash=0x7078d30ee0f8f5de332d13401288adf3fca1253b8e642b744961710911519c04 contract=0x22b6477B86cc7e08e0707a1C15F01d36bfa95Ade
+INFO [02-27|16:38:14] Updated mining threads                   threads=0
+INFO [02-27|16:38:14] Transaction pool price threshold updated price=18000000000
+INFO [02-27|16:38:14] Starting mining operation 
+INFO [02-27|16:38:14] Commit new mining work                   number=61 txs=1 uncles=0 elapsed=2.000ms
+INFO [02-27|16:42:22] Successfully sealed new block            number=61 hash=035003…8aae17
+INFO [02-27|16:42:22] 🔨 mined potential block                  number=61 hash=035003…8aae17
+INFO [02-27|16:42:22] Commit new mining work                   number=62 txs=0 uncles=0 elapsed=5.000ms
+INFO [02-27|16:42:23] Successfully sealed new block            number=62 hash=c30df7…8393f3
+INFO [02-27|16:42:23] 🔨 mined potential block                  number=62 hash=c30df7…8393f3
+INFO [02-27|16:42:23] Commit new mining work                   number=63 txs=0 uncles=0 elapsed=0s
+INFO [02-27|16:53:24] Submitted contract creation              fullhash=0x6534d70e5596c94c3363baa79ee7a3aabdbf184b924fe49e928412f1c20643e8 contract=0xeC79B215edD0482b3957aCAa498D156332Acc735
+INFO [02-27|16:53:48] Updated mining threads                   threads=0
+INFO [02-27|16:53:48] Transaction pool price threshold updated price=18000000000
+INFO [02-27|16:53:48] Starting mining operation 
+INFO [02-27|16:53:48] Commit new mining work                   number=63 txs=1 uncles=0 elapsed=1ms
+INFO [02-27|17:00:38] Successfully sealed new block            number=63 hash=43dd89…78371d
+INFO [02-27|17:00:38] 🔨 mined potential block                  number=63 hash=43dd89…78371d
+INFO [02-27|17:00:38] Commit new mining work                   number=64 txs=0 uncles=0 elapsed=0s
+^CINFO [02-28|11:07:08] Starting peer-to-peer node               instance=Geth/node1/v1.7.3-stable-4bb3c89d/windows-amd64/go1.9
+INFO [02-28|11:07:08] Allocated cache and file handles         database=D:\\Ethereum\\node1\\geth\\chaindata cache=128 handles=1024
+INFO [02-28|11:07:08] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Engine: unknown}"
+INFO [02-28|11:07:08] Disk storage enabled for ethash caches   dir=D:\\Ethereum\\node1\\geth\\ethash count=3
+INFO [02-28|11:07:08] Disk storage enabled for ethash DAGs     dir=C:\\Users\\LGCNS\\AppData\\Ethash count=2
+INFO [02-28|11:07:08] Initialising Ethereum protocol           versions="[63 62]" network=15
+INFO [02-28|11:07:08] Loaded most recent local header          number=63 hash=43dd89…78371d td=5535502702
+INFO [02-28|11:07:08] Loaded most recent local full block      number=63 hash=43dd89…78371d td=5535502702
+INFO [02-28|11:07:08] Loaded most recent local fast block      number=63 hash=43dd89…78371d td=5535502702
+INFO [02-28|11:07:08] Loaded local transaction journal         transactions=3 dropped=3
+INFO [02-28|11:07:08] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [02-28|11:07:08] Blockchain not empty, fast sync disabled 
+INFO [02-28|11:07:08] Starting P2P networking 
+INFO [02-28|11:07:08] RLPx listener up                         self="enode://8c1668b0ca133b87dd71a0bcc0172464ecd53f4eadf6a66d6107a3de080dff3480e9779ad8fe397503557f6f1e7bfc080f4e3c2f0da07e76b93ac880eece6002@[::]:3031?discport=0"
+INFO [02-28|11:07:08] HTTP endpoint opened: http://0.0.0.0:8541 
+INFO [02-28|11:07:08] IPC endpoint opened: \\.\pipe\geth.ipc 
+INFO [02-28|12:07:08] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-28|13:07:08] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-28|14:07:08] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-28|14:13:37] Submitted transaction                    fullhash=0x7a8813e318ebcca4c109866b95cd0c32f581f823d4d22328f092abfddeae2a5a recipient=0xeC79B215edD0482b3957aCAa498D156332Acc735
+INFO [02-28|14:18:28] Updated mining threads                   threads=0
+INFO [02-28|14:18:28] Transaction pool price threshold updated price=18000000000
+INFO [02-28|14:18:28] Starting mining operation 
+INFO [02-28|14:18:28] Commit new mining work                   number=64 txs=1 uncles=0 elapsed=3.000ms
+INFO [02-28|14:21:00] Successfully sealed new block            number=64 hash=cc2d16…640ab5
+INFO [02-28|14:21:00] 🔨 mined potential block                  number=64 hash=cc2d16…640ab5
+INFO [02-28|14:21:00] Commit new mining work                   number=65 txs=0 uncles=0 elapsed=14.000ms
+INFO [02-28|14:26:01] Successfully sealed new block            number=65 hash=dbc97d…eb471d
+INFO [02-28|14:26:01] 🔨 mined potential block                  number=65 hash=dbc97d…eb471d
+INFO [02-28|14:26:01] Commit new mining work                   number=66 txs=0 uncles=0 elapsed=1.000ms
+INFO [02-28|14:31:38] Successfully sealed new block            number=66 hash=a03ef4…d2aca5
+INFO [02-28|14:31:38] 🔨 mined potential block                  number=66 hash=a03ef4…d2aca5
+INFO [02-28|14:31:38] Commit new mining work                   number=67 txs=0 uncles=0 elapsed=0s
+INFO [02-28|14:32:37] Successfully sealed new block            number=67 hash=6a8307…1d3435
+INFO [02-28|14:32:37] 🔨 mined potential block                  number=67 hash=6a8307…1d3435
+INFO [02-28|14:32:37] Commit new mining work                   number=68 txs=0 uncles=0 elapsed=1ms
+INFO [02-28|14:43:39] Successfully sealed new block            number=68 hash=6e5046…d4c8e6
+INFO [02-28|14:43:39] 🔨 mined potential block                  number=68 hash=6e5046…d4c8e6
+INFO [02-28|14:43:39] Commit new mining work                   number=69 txs=0 uncles=0 elapsed=2.000ms
+INFO [02-28|14:57:24] Successfully sealed new block            number=69 hash=ee0295…09f056
+INFO [02-28|14:57:24] 🔗 block reached canonical chain          number=64 hash=cc2d16…640ab5
+INFO [02-28|14:57:24] 🔨 mined potential block                  number=69 hash=ee0295…09f056
+INFO [02-28|14:57:24] Commit new mining work                   number=70 txs=0 uncles=0 elapsed=1.000ms
+^CINFO [02-28|15:00:50] Starting peer-to-peer node               instance=Geth/node1/v1.7.3-stable-4bb3c89d/windows-amd64/go1.9
+INFO [02-28|15:00:50] Allocated cache and file handles         database=D:\\Ethereum\\node1\\geth\\chaindata cache=128 handles=1024
+INFO [02-28|15:00:50] Initialised chain configuration          config="{ChainID: 15 Homestead: 0 DAO: <nil> DAOSupport: false EIP150: <nil> EIP155: 0 EIP158: 0 Byzantium: <nil> Engine: unknown}"
+INFO [02-28|15:00:50] Disk storage enabled for ethash caches   dir=D:\\Ethereum\\node1\\geth\\ethash count=3
+INFO [02-28|15:00:50] Disk storage enabled for ethash DAGs     dir=C:\\Users\\LGCNS\\AppData\\Ethash count=2
+INFO [02-28|15:00:50] Initialising Ethereum protocol           versions="[63 62]" network=15
+INFO [02-28|15:00:50] Loaded most recent local header          number=69 hash=ee0295…09f056 td=5720279153
+INFO [02-28|15:00:50] Loaded most recent local full block      number=69 hash=ee0295…09f056 td=5720279153
+INFO [02-28|15:00:50] Loaded most recent local fast block      number=69 hash=ee0295…09f056 td=5720279153
+INFO [02-28|15:00:50] Loaded local transaction journal         transactions=1 dropped=1
+INFO [02-28|15:00:50] Regenerated local transaction journal    transactions=0 accounts=0
+WARN [02-28|15:00:50] Blockchain not empty, fast sync disabled 
+INFO [02-28|15:00:50] Starting P2P networking 
+INFO [02-28|15:00:50] RLPx listener up                         self="enode://8c1668b0ca133b87dd71a0bcc0172464ecd53f4eadf6a66d6107a3de080dff3480e9779ad8fe397503557f6f1e7bfc080f4e3c2f0da07e76b93ac880eece6002@[::]:3031?discport=0"
+INFO [02-28|15:00:50] IPC endpoint opened: \\.\pipe\geth.ipc 
+INFO [02-28|15:00:50] HTTP endpoint opened: http://0.0.0.0:8541 
+INFO [02-28|15:08:21] Submitted contract creation              fullhash=0xd99e169b91942adde59b61e254649dbab98c82eb3778c048d0007100502b177b contract=0x3Be845BBa36393218E48A6E3A1ca2236a7af45db
+INFO [02-28|15:08:49] Updated mining threads                   threads=0
+INFO [02-28|15:08:49] Transaction pool price threshold updated price=18000000000
+INFO [02-28|15:08:49] Starting mining operation 
+INFO [02-28|15:08:49] Commit new mining work                   number=70 txs=1 uncles=0 elapsed=4.000ms
+INFO [02-28|15:16:01] Successfully sealed new block            number=70 hash=e0e252…0a275b
+INFO [02-28|15:16:01] 🔨 mined potential block                  number=70 hash=e0e252…0a275b
+INFO [02-28|15:16:01] Commit new mining work                   number=71 txs=0 uncles=0 elapsed=1ms
+INFO [02-28|15:58:38] Submitted contract creation              fullhash=0x71813d2992787fead2ceb670d80d712b2fdd7bf490577ec3deb893a8a042e5b0 contract=0xB327528cF9fFA49D8bC0fD001A9BE60309597D90
+INFO [02-28|16:00:08] Updated mining threads                   threads=0
+INFO [02-28|16:00:08] Transaction pool price threshold updated price=18000000000
+INFO [02-28|16:00:08] Starting mining operation 
+INFO [02-28|16:00:08] Commit new mining work                   number=71 txs=1 uncles=0 elapsed=2.000ms
+INFO [02-28|16:00:19] Successfully sealed new block            number=71 hash=c20607…765760
+INFO [02-28|16:00:19] 🔨 mined potential block                  number=71 hash=c20607…765760
+INFO [02-28|16:00:19] Commit new mining work                   number=72 txs=0 uncles=0 elapsed=5.000ms
+INFO [02-28|16:00:50] Regenerated local transaction journal    transactions=0 accounts=0
+INFO [02-28|16:02:50] Successfully sealed new block            number=72 hash=3e2b5c…c711d0
+INFO [02-28|16:02:50] 🔨 mined potential block                  number=72 hash=3e2b5c…c711d0
+INFO [02-28|16:02:50] Commit new mining work                   number=73 txs=0 uncles=0 elapsed=0s
+INFO [02-28|16:07:46] Submitted transaction                    fullhash=0x46b4215b0febf02a59a2f93741f5626a4191b2a89ab942262ebb8cabf1d1c3f3 recipient=0xB327528cF9fFA49D8bC0fD001A9BE60309597D90
+INFO [02-28|16:08:39] Updated mining threads                   threads=0
+INFO [02-28|16:08:39] Transaction pool price threshold updated price=18000000000
+INFO [02-28|16:08:39] Starting mining operation 
+INFO [02-28|16:08:39] Commit new mining work                   number=73 txs=1 uncles=0 elapsed=1.000ms
+INFO [02-28|16:13:30] Updated mining threads                   threads=0
+INFO [02-28|16:13:30] Transaction pool price threshold updated price=18000000000
+INFO [02-28|16:13:30] Starting mining operation 
+INFO [02-28|16:13:30] Commit new mining work                   number=73 txs=1 uncles=0 elapsed=1ms
+INFO [02-28|16:15:49] Successfully sealed new block            number=73 hash=4c1b5c…cb24fa
+INFO [02-28|16:15:49] 🔨 mined potential block                  number=73 hash=4c1b5c…cb24fa
+INFO [02-28|16:15:49] Commit new mining work                   number=74 txs=0 uncles=0 elapsed=1ms
+INFO [02-28|16:16:33] Successfully sealed new block            number=74 hash=2600cf…53d4d6
+INFO [02-28|16:16:33] 🔨 mined potential block                  number=74 hash=2600cf…53d4d6
+INFO [02-28|16:16:33] Commit new mining work                   number=75 txs=0 uncles=0 elapsed=1.000ms
+INFO [02-28|17:00:50] Regenerated local transaction journal    transactions=0 accounts=0
+^C

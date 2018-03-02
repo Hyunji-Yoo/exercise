@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customized Funding SPA</title>
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/web3.js-develop/dist/web3.js"></script>
+	<script type="text/javascript">
+	var Web3 = require('web3');
+	var web3 = new Web3(new Web3.providers.HttpProvider('http://127.0.0.1:8541'));
+	
+	var contractCode = '0x60606040526101d3806100126000396000f3606060405260e060020a60003504635b2329d48114610034578063c1cbbca714610067578063f7572cf3146100e3575b610002565b346100025761017360043560008181526001602081905260408220908101546003820154101561018757600091506101cd565b346100025760048035600090815260016020818152604080842081518083018352338152348185018181526002840180548089019091558852978301909452919094208054915173ffffffffffffffffffffffffffffffffffffffff199092169190911781559351939091019290925560030180549091019055005b3461000257600080546001808201835560408051608081018252600435815260243560208281019182528284018781526060840188815287895291869052939096208054925173ffffffffffffffffffffffffffffffffffffffff199093169290921782555192810192909255516002820155915160039092019190915560408051918252519081900360200190f35b604080519115158252519081900360200190f35b8054600382015460405173ffffffffffffffffffffffffffffffffffffffff929092169181156108fc0291906000818181858888f1505060006003850155506001935050505b5091905056';	
+	var abi = [{"constant": false,"inputs": [{"name": "campaignID","type": "uint256"}], "name": "checkGoalReached","outputs": [{"name": "reached","type": "bool"}],"payable": false, "type": "function","stateMutability": "nonpayable"},{"constant": false,"inputs": [{"name": "campaignID","type": "uint256"}],"name": "contribute", "outputs": [],"payable": false,"type": "function", "stateMutability": "nonpayable"	},{"constant": false,"inputs": [{"name": "beneficiary","type": "address"},{"name": "goal","type": "uint256"}],"name": "newCampaign","outputs": [{"name": "campaignID", "type": "uint256" } ],"payable": false,"type": "function","stateMutability": "nonpayable"}];
+	var Contract = web3.eth.contract(abi); // 클래스 생성
+	var crowd = null;
+	
+	$(document).ready(function(){
+		$('#getAddrBtn').click(function(){
+			var addr = web3.eth.accounts[0];
+			$('#myAccount').val(addr);
+		});
+		
+		$('#getBalanceBtn').click(function(){
+			var balance = web3.fromWei(web3.eth.getBalance($('#myAccount').val()).toNumber(), 'ether');
+			$('#myBalance').val(balance);
+		});
+		
+		$('#sendBtn').click(function(){
+			var unlockResult = true;
+			unlockResult = web3.personal.unlockAccount(web3.eth.coinbase, 'Alice');
+			if ( unlockResult == false ) { alert('failed to unlock the account'); return; }
+			
+			var remitAmt = web3.toWei($('#remitAmt').val(), 'ether');
+			var toAddr = $('#toAddr').val();
+			 web3.eth.sendTransaction({
+				from: web3.eth.coinbase,
+				to: toAddr,
+				value: remitAmt
+			 }, function(err, txHash) {
+				if (!err) {
+					console.log('transactionHash: ' + txHash);				
+					$('#txHash').val(txHash);
+					setBlockFilter();
+				}
+			 });
+		});
+		
+		$('#createBtn').click(function(){
+			var unlockResult = true;
+			unlockResult = web3.personal.unlockAccount(web3.eth.coinbase, 'Alice');
+			if ( unlockResult == false ) { alert('failed to unlock the account'); return; }
+		
+			// 인스턴스 생성
+			crowd = Contract.new({
+				data: contractCode,
+				gas: 2000000,
+				from: web3.eth.coinbase
+			}, function(error, contract){
+				if (!error) {
+					if (!contract.address) {
+						console.log('Contract-creating TX Hash: ', contract.transactionHash);
+						$('#contractTxHash').val(contract.transactionHash);
+					} else {
+						console.log('Contract Addr', contract.address);
+						$('#contractAddr').val(contract.address);
+					}
+				} else {
+					console.log('failed to create contract', error);
+				}
+			});
+		});
+		
+		$('#atBtn').click(function(){
+			// 동일한 클래스에 대해 인스턴스가 여러개 있을 수 있으므로, 위에서 생성한 인스턴스로 자바스크립트 객체 생성
+			var address = $('#contractAddr').val();
+			crowd = Contract.at(address);
+			console.log('crowd: ', crowd);
+		});
+		
+		$('#newCampaignBtn').click(function(){
+			var unlockResult = true;
+			unlockResult = web3.personal.unlockAccount(web3.eth.coinbase, 'Alice');
+			if ( unlockResult == false ) { alert('failed to unlock the account'); return; }
+			
+			var beneficiary = $('#beneficiary').val();
+			var goalAmt = web3.toWei($('#goalAmt').val(), 'ether');
+			
+			var myAccount = web3.eth.coinbase;
+			
+			crowd.newCampaign(beneficiary, goalAmt, { from: myAccount, gas: 2000000 }, function(e, r){ 
+				if (!e) console.log('campaignID: ', r);
+				else console.log('error occured: ', e);
+			});
+		});
+	});
+	
+	function setBlockFilter(flag){
+		var blockFilter = web3.eth.filter('latest'); //latest or pending
+		blockFilter.watch(function(error, blockHash){
+			var block = web3.eth.getBlock(blockHash);
+			var prevFilterLog = $('#filterResult').html();	
+			var filterLog = 'New Block(' + block.number + ')[' + block.hash + ']/' + block.transactions.length + 'TXs';
+			//appendLog(filterLog);
+			$('#remitResult').html(prevFilterLog + '\n' + filterLog);				
+		});
+	}	
+	</script>
+</head>
+<body>
+	<div>
+		<h2>Customized Funding SPA</h2>
+	</div>
+	<div>
+		<h3>My Account</h3>
+		<button name="getAddrBtn" id="getAddrBtn" onclick="">Get Address</button>
+		<input type="text" name="myAccount" id="myAccount" value="" readonly /><br/>
+		<button name="getBalanceBtn" id="getBalanceBtn" onclick="">Get Balance</button>
+		<input type="text" name="myBalance" id="myBalance" value="" readonly />&nbsp;ether
+	</div>
+	<div>
+		<h3>Remit</h3>
+		<label for="remitAmt">Amount: </label><input type="text" name="remitAmt" id="remitAmt" value ="" />&nbsp;ether
+		<label for="toAddr">To: </label><input type="text" name="toAddr" id="toAddr" value="" />
+		<button name="sendBtn" id="sendBtn" onclick="">Send</button><br/>
+		<input type="hidden" name="txHash" id="txHash" value="" />
+		<textarea name="remitResult" id="remitResult" cols="50" rows="5" readonly>
+		</textarea>
+	</div>
+	<div>
+		<h3>Cloud Funding</h3>
+		
+		<h4>Create Campaign Contract</h4>
+		<button name="createBtn" id="createBtn" onclick="">Create</button>
+		<label for="contractTxHash">TX Hash: </label><input type="text" name="contractTxHash" id="contractTxHash" value="" readonly/><br/>
+		<label for="contractAddr">Contract Address: </label><input type="text" name="contractAddr" id="contractAddr" value="" readonly/>
+		<button name="atBtn" id="atBtn" onclick="">At</button>
+		
+		<h4>New Campaign</h4>
+		<label for="beneficiary">Beneficiary: </label><input type="text" name="beneficiary" id="beneficiary" value="" />
+		<label for="goalAmt">Goal Amount: </label><input type="text" name="goalAmt" id="goalAmt" value="" />
+		<button name="newCampaignBtn" id="newCampaignBtn" onclick="">New Campaign</button>
+		
+		<h4>Goal Reached Check</h4>
+	</div>
+	<div>
+	</div>	
+</body>
+</html>

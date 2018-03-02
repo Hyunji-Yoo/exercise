@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript" src="../js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="../js/web3.js-develop/dist/web3.js"></script>
+    <title>Number Set</title>
+	<script type="text/javascript">
+	var Web3 = require('web3');
+	var web3 = new Web3();
+	web3.setProvider(new web3.providers.HttpProvider("http://localhost:8541"));
+	
+	function getBalance(){
+		var address = web3.eth.accounts[0];		
+		var balance = 0;
+		balance = web3.fromWei(web3.eth.getBalance(address).toNumber(),'ether');
+		
+		$('#address').val(address);
+		$('#balance').val(balance);
+	}
+	
+	function sendEther(){
+		var unlockResult = false;
+		unlockResult = web3.personal.unlockAccount(web3.eth.coinbase, 'Alice');
+		
+		var toAddress = $('#toAddress').val();
+		var sendAmount = web3.toWei($('#sendAmount').val(), 'ether');
+		
+		var txHash = web3.eth.sendTransaction({
+			from: web3.eth.coinbase,
+			to: toAddress,
+			value: sendAmount
+		});
+		console.log('txHash: ' + txHash);
+		$('#txHash').val(txHash);
+		$('#blockHash').val('');
+	}
+	
+	function getSendResult(){
+		console.log('txHash: ' + txHash);
+		var txHash = $('#txHash').val();
+		var txReceipt = web3.eth.getTransactionReceipt(txHash);
+		if( txReceipt == null ) {
+			alert('트랜잭션을 처리 중입니다.');
+		} else {
+			$('#blockHash').val(txReceipt.blockHash);
+		}
+	}
+	
+	function setBlockFilter(){
+		var blockFilter = web3.eth.filter('latest'); //latest or pending
+		blockFilter.watch(function(error, blockHash){
+			var block = web3.eth.getBlock(blockHash);
+			var prevFilterLog = $('#filterResult').html();	
+			var filterLog = 'New Block(' + block.number + ')[' + block.hash + ']/' + block.transactions.length + 'TXs';
+			//appendLog(filterLog);
+			$('#filterResult').html(prevFilterLog + '\n' + filterLog);			
+		});
+	}
+	
+	function setNumber(){
+		alert("test");
+		//web3.setProvider(new Web3.providers.IpcProvider('http://127.0.0.1:8541'));
+	}
+	
+	$(function(){
+		getBalance();
+		setBlockFilter();
+	})	
+	</script>
+</head>
+<body>
+	<div>
+		<h1>web3.js로 tx배포/filter설정 연습</h1>
+	</div>
+	<div>
+		<h2>Account Information</h2>
+		<label for="address">주소: </label>
+		<input type="text" name="address" id="address" value="" readonly />
+		<label for="balance">잔고: </label>
+		<input type="text" name="balance" id="balance" value="" readonly />
+	</div>
+	<div>
+		<h2>Transfer Ether</h2>
+		<label for="toAddress">수신처 주소: </label>
+		<input type="text" name="toAddress" id="toAddress" value="" />
+		<label for="sendAmount">송금액: </label>
+		<input type="text" name="sendAmount" id="sendAmount" value="" />
+		<button id="btn" onclick="javascript:sendEther();">보내기</button>
+		<h4>송금결과 확인</h4>
+		<label for="txHash">TX HASH: </label>
+		<input type="text" name="txHash" id="txHash" value="" />		
+		<button id="btn2" onclick="javascript:getSendResult();">조회</button>
+		<label for="blockHash">Block HASH: </label>
+		<input type="text" name="blockHash" id="blockHash" value="" readonly />
+	</div>
+	<div>
+		<h2>Event Filter</h2>
+		<textarea name="filterResult" id="filterResult" cols="50" rows="30" readonly >
+		</textarea>
+	</div>
+<!--	<div>
+		<h2>번호 설정</h2>
+		<label for="numberSet">number: </label>
+		<input type="text" name="numberSet" id="numberSet" value="" />
+		<button id="btn" onclick="setNumber()">설정</button>
+	</div>
+	<div>
+		<h2>번호 조회</h2>
+		<input type="text" name="numberGet" id="numberGet" value="" readonly />
+	</div>
+-->
+</body>
+</html>
+	
